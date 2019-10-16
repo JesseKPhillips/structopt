@@ -23,19 +23,19 @@ void main(string[] args) {
         import std.typecons;
         import std.format;
         import std.conv;
-        auto ans = `auto helpInfo = getopt(args, `;
+        auto ans = `getopt(args, `;
         static foreach(opt; FieldNameTuple!(typeof(Options))) {
             // getUDAs will obtain the User Defined Attribute
             // of the specified type
             ans ~= text("getUDAs!(", Options.stringof, ".", opt, ", Option)[0].cononical(),",
-              " getUDAs!(", Options.stringof, ".", opt, ", Help)[0].msg, &", Options.stringof, ".", opt, ",");
+              " getUDAs!(", Options.stringof, ".", opt, ", Help)[0].msg, &", Options.stringof, ".", opt, ",")
         }
 
         return ans ~ ");";
     }
 
     // Pass in the struct to generate UDA for
-    mixin(GenerateGetopt!props);
+    auto helpInfo = mixin(GenerateGetopt!props);
 
     
         defaultGetoptPrinter("Options: ",
