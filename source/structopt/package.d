@@ -1,3 +1,5 @@
+module structopt.package;
+
 import std.traits;
 import std.getopt;
 
