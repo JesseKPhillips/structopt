@@ -1,0 +1,6 @@
+name "structopt"
+targetType "library"
+description "Generate GetOpt method call from Structure"
+authors "Jesse Phillips"
+copyright "Copyright © 2019, Jesse Phillips"
+license "Boost"
