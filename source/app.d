@@ -1,7 +1,5 @@
 import structopt;
 
-import std.traits;
-
 // Specify The Parameter Structure
 struct Options
 {

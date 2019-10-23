@@ -2,8 +2,7 @@ module structopt;
 
 public import structopt.attributes;
 public import std.getopt;
-
-import std.traits;
+public import std.traits;
 
 alias GetOption = std.getopt.Option;
 alias Option = structopt.attributes.Option;
