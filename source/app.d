@@ -16,7 +16,7 @@ void main(string[] args) {
     Options props;
 
     // Pass in the struct to generate UDA for
-    auto helpInfo = mixin(GenerateGetopt!props);
+    auto helpInfo = mixin(GenerateGetopt!(props, args));
 
         defaultGetoptPrinter("Options: ",
           helpInfo.options);
