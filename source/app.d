@@ -12,6 +12,8 @@ struct Options
     string[] files;
 }
 
+version(unittest) {}
+else
 void main(string[] args) {
     Options props;
 
