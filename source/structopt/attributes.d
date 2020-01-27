@@ -37,7 +37,7 @@ struct Option {
      * @Option("help", "h")
      */
     this(string[] names...) {
-        this.names = names.idup;
+        this.names = names.dup;
     }
 
     /**
