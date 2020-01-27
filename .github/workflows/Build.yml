@@ -11,6 +11,6 @@ jobs:
     - uses: actions/checkout@v1
     - uses: mihails-strasuns/setup-dlang@v0.3.0
       with:
-        compiler: dmd-2.088.0
+        compiler: dmd-2.090.0
     - name: Run tests
       run: dub test
