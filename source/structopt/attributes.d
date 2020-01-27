@@ -8,6 +8,8 @@ module structopt.attributes;
 
 import std.traits;
 
+@safe:
+
 /**
  * Command Line Help Message for the arugement.
  */
@@ -22,6 +24,7 @@ struct Help {
  * Command Line Argument Option which causes assignement to this field.
  */
 struct Option {
+@safe:
     /**
      * All argument options.
      */
@@ -34,7 +37,7 @@ struct Option {
      * @Option("help", "h")
      */
     this(string[] names...) {
-        this.names = names;
+        this.names = names.dup;
     }
 
     /**
