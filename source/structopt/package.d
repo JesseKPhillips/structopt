@@ -40,6 +40,8 @@ public import structopt.attributes;
 public import std.getopt;
 public import std.traits;
 
+@safe:
+
 /// Rename the Option struct of getopt
 alias GetOption = std.getopt.Option;
 /// Reastablish the name for the struct attributes
